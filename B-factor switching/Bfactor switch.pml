@@ -15,6 +15,9 @@ alter obj01, b=0.0
  
 # update the B Factors with new properties
 alter obj01 and n. CA, b=stored.newB.pop(0)
+
+# copy b-factor from carbon alphas to rest of residue atoms
+alphaToAll *, b
  
 # color the protein based on the new B Factors of the alpha carbons
 spectrum b, red_white_blue, obj01, minimum=0, maximum=.4
